@@ -22,9 +22,9 @@ npm install
 ### 2. Configure Environment
 
 Your `.env` file is already configured with:
-- n8n instance URL: `https://n8n.fahmiarif.dev`
+- n8n instance URL: `Input your n8n instance URL here`
 - API token for authentication
-- Workflow ID: `PWsz9WTxFMIpgSNf`
+- Workflow ID: `Input your workflow ID here`
 
 ### 3. Start the Integration
 
@@ -76,7 +76,7 @@ node cli.js execute --data '{"key": "value"}'
 
 ### VS Code Integration
 
-1. The integration automatically downloads your workflow to `workflows/workflow_PWsz9WTxFMIpgSNf.json`
+1. The integration automatically downloads your workflow to `workflows/workflow_InputYourIDWorkflow.json`
 2. Edit the JSON file in VS Code
 3. Changes are automatically synced to n8n
 4. Other connected clients receive real-time updates
@@ -149,9 +149,9 @@ await client.updateWorkflow(workflow.id, workflow);
 ```env
 # n8n Configuration
 N8N_PROTOCOL=https
-N8N_HOST=n8n.fahmiarif.dev
+N8N_HOST=input-your-n8n-instance-url-here
 N8N_API_TOKEN=your-api-token
-N8N_WORKFLOW_ID=PWsz9WTxFMIpgSNf
+N8N_WORKFLOW_ID=input-your-workflow-id-here
 
 # Integration Settings
 N8N_VSCODE_SYNC_ENABLED=true
@@ -165,16 +165,16 @@ Your existing `docker-compose.yml` should include the webhook configurations:
 ```yaml
 environment:
   - N8N_PROTOCOL=https
-  - N8N_HOST=n8n.fahmiarif.dev
-  - N8N_WEBHOOK_URL=https://n8n.fahmiarif.dev
-  - WEBHOOK_URL=https://n8n.fahmiarif.dev
-  - VUE_APP_URL_BASE_API=https://n8n.fahmiarif.dev/
+  - N8N_HOST=input-your-n8n-instance-url-here
+  - N8N_WEBHOOK_URL=input-your-n8n-webhook-url-here
+  - WEBHOOK_URL=input-your-n8n-webhook-url-here
+  - VUE_APP_URL_BASE_API=input-your-n8n-webhook-url-here/
 ```
 
 ## Troubleshooting
 
 ### Connection Issues
-- Check if n8n is accessible at `https://n8n.fahmiarif.dev`
+- Check if n8n is accessible at `input-your-n8n-webhook-url-here`
 - Verify API token is valid
 - Ensure Cloudflare tunnel is working
 
